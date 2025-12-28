@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Love Letter 💌</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="floating-hearts"></div>
+
+    <div id="password-page" class="page active">
+        <div class="password-gate">
+            <div class="heart-container">
+                <div class="heart-pulse"></div>
+                <div class="heart-icon">💖</div>
+            </div>
+            <h1>Enter Our Special Date 💕</h1>
+            <p class="hint">Hint: Ur birthday</p>
+            <div class="keypad">
+                <div id="password-display" class="password-display">
+                        <span class="digit-placeholder">_</span>
+                        <span class="digit-placeholder">_</span>
+                        <span class="digit-placeholder">_</span>
+                        <span class="digit-placeholder">_</span>
+                    </div>
+                <div class="keypad-buttons">
+                    <button class="key" data-value="1">1</button>
+                    <button class="key" data-value="2">2</button>
+                    <button class="key" data-value="3">3</button>
+                    <button class="key" data-value="4">4</button>
+                    <button class="key" data-value="5">5</button>
+                    <button class="key" data-value="6">6</button>
+                    <button class="key" data-value="7">7</button>
+                    <button class="key" data-value="8">8</button>
+                    <button class="key" data-value="9">9</button>
+                    <button class="key clear" id="clear">Clear</button>
+                    <button class="key" data-value="0">0</button>
+                    <button class="key backspace" id="backspace">⌫</button>
+                </div>
+            </div>
+            <button id="unlock-btn" class="unlock-btn">Unlock My Heart 🔓</button>
+            <div id="error-message" class="error-message">Not quite right, my love 💔 Try again!</div>
+        </div>
+    </div>
+
+    <div id="loading-page" class="page hidden">
+        <div class="loading-content">
+            <div class="heart-loader">💝</div>
+            <h1>Unlocking Memories...</h1>
+            <p class="loading-text">Finding our special moments</p>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="letter-page" class="page hidden">
+        <div class="envelope">
+            <div class="envelope-flap"></div>
+            <div class="love-letter">
+                <div class="letter-header">
+                    <h2>💌 My Dearest Love 💌</h2>
+                    <div class="date">Today & Forever</div>
+                </div>
+                <div class="letter-content">
+                    <p class="fade-in">My dearest love,</p>
+                    <p class="fade-in">If I were to describe you with a flower, you would be a magnolia - beautiful, elegant, and with a timeless grace that captivates everyone who sees you.</p>
+                    <p class="fade-in">Like a magnolia blossoming in spring, your presence brings light and beauty wherever you go. Your petals are soft yet strong, delicate yet resilient, just like the incredible woman you are.</p>
+                    <p class="fade-in">You have this pure, authentic beauty that doesn't need to shout to be noticed - just like the magnolia, you bloom quietly but your impact is unforgettable. Your smile is as radiant as magnolia petals kissed by morning dew.</p>
+                    <p class="fade-in">What I love most about magnolias is their enduring nature - they bloom year after year, becoming more beautiful with time. And that's exactly how I see our love growing, becoming more precious with each passing day.</p>
+                    <p class="fade-in">You are my magnolia - my symbol of purity, dignity, and enduring love. In the garden of my heart, you will always be the most beautiful bloom.</p>
+                    <p class="fade-in signature">Forever yours,<br>With all my heart 💖</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-section">
+            <h3>My Beautiful Princess ✨</h3>
+            <div class="photos-container">
+                <div class="photo-card" data-index="0">
+                    <img src="dina/dina.jpg" alt="My Beautiful Love" class="photo">
+                    <div class="photo-caption">My Sunshine ☀️</div>
+                </div>
+                <div class="photo-card" data-index="1">
+                    <img src="dina/irdina5.jpg" alt="Lovely Smile" class="photo">
+                    <div class="photo-caption">That Smile 😊</div>
+                </div>
+                <div class="photo-card" data-index="2">
+                    <img src="dina/dina2.jpg" alt="Beautiful Memory" class="photo">
+                    <div class="photo-caption">My Everything 💕</div>
+                </div>
+            </div>
+            <button id="view-all-photos" class="view-btn">View All Photos 📸</button>
+        </div>
+
+        <div class="audio-player">
+            <p>Song For You 🎵</p>
+            <audio id="love-song" controls>
+                <source src="dina/magnolia.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+    <!-- Photo Gallery Modal -->
+    <div id="gallery-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <div class="gallery-view">
+                <img id="modal-image" src="" alt="Photo">
+                <div class="gallery-controls">
+                    <button id="prev-btn" class="nav-btn">←</button>
+                    <span id="photo-counter">1 / 3</span>
+                    <button id="next-btn" class="nav-btn">→</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
